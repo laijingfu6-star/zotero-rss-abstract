@@ -126,6 +126,7 @@ def generate(feed):
 
 def main():
     feeds = json.loads((ROOT / "feeds.json").read_text(encoding="utf-8"))
+    OUT.mkdir(parents=True, exist_ok=True)
     failures = 0
     for feed in feeds:
         try:
